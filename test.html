@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $.fn.isOnScreen = function () {
+            var win = $(window);
+            var viewport = {
+                top: win.scrollTop(),
+                bottom: this.top + win.height()
+            };
+            var bounds = this.offset();
+            bounds.bottom = bounds.top + this.outerHeight();
+            return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+        };
+        $(window).scroll(function () {
+            if($(window).width() >= 1020 & $(window).height() >= 670){
+                if ($('#d1').isOnScreen() == true) {
+                    $('#button1').css("color", "white");
+                    $('#button1').css("font-size", "20px");
+                    $('#line1').css("width", "120px");
+                    $('#button3').css("color", "rgb(174, 174, 233)");
+                    $('#button3').css("font-size", "15px");
+                    $('#line3').css("width", "60px");
+                    $('#button2').css("color", "rgb(174, 174, 233)");
+                    $('#button2').css("font-size", "15px");
+                    $('#line2').css("width", "60px");
+                }
+                else if($('#d2').isOnScreen() == true){
+                    $('#button2').css("color", "white");
+                    $('#button2').css("font-size", "20px");
+                    $('#line2').css("width", "120px");
+                    $('#button1').css("color", "rgb(174, 174, 233)");
+                    $('#button1').css("font-size", "15px");
+                    $('#line1').css("width", "60px");
+                    $('#button3').css("color", "rgb(174, 174, 233)");
+                    $('#button3').css("font-size", "15px");
+                    $('#line3').css("width", "60px");
+                }
+                else if($('#d3').isOnScreen() == true){
+                    $('#button3').css("color", "white");
+                    $('#button3').css("font-size", "20px");
+                    $('#line3').css("width", "120px");
+                    $('#button1').css("color", "rgb(174, 174, 233)");
+                    $('#button1').css("font-size", "15px");
+                    $('#line1').css("width", "60px");
+                    $('#button2').css("color", "rgb(174, 174, 233)");
+                    $('#button2').css("font-size", "15px");
+                    $('#line2').css("width", "60px");
+                }
+            }
+        });
+    </script>
+    <link href="./test.css" rel="stylesheet">
+    <title>PORTFOLIO</title>
+</head>
+<body onmousemove="mouse_effect(event)">
+    <div class="left-container">
+        <h1 class="head-text" id="name" style="font-size: 42px;"><B>Jeeban Jyoti Patra</B></h1>
+        <h5 class="head-text" style="margin-top: 17px;">Web Developer.<br>Android, IOS, Windows App Developer.</h5>
+        <h6 id="short-description" class="head-text" style="margin-top: 17px; color: rgb(174, 174, 233);">I build websites, web-apps with node.js, android, ios and windows applications.</h6>
+
+        <div class="sections" onmouseover="over1()" onmouseleave="leave1()" style="margin-top: 80px;">
+            <a href="#d1">
+                <button class="s-button" id="button1"><b>ABOUT</b></button>
+                <hr size="3" class="line" id="line1">
+            </a>
+        </div>
+        <div class="sections" onmouseover="over2()" onmouseleave="leave2()">
+            <a href="#d2">
+                <button class="s-button" id="button2"><b>EXPERTISE</b></button>
+                <hr size="3" class="line" id="line2">
+            </a>
+        </div>
+        <div class="sections" onmouseover="over3()" onmouseleave="leave3()">
+            <a href="#d3">
+                <button class="s-button" id="button3"><b>PROJECTS</b></button>
+                <hr size="3" class="line" id="line3">
+            </a>
+        </div>
+
+        <ul class="contact" id="contacts-big-screen">
+            <li><a href="" class="contact-links">Github</li></a>
+            <li><a href="" class="contact-links">Instagram</li></a>
+            <li><a href="" class="contact-links">Mail</li></a>
+            <li><a href="" class="contact-links">LinkedIn</li></a>
+        </ul>
+        
+    </div>
+    <div class="right-container">
+        <h4 class="mob-part-head" id="hd1">ABOUT</h4>
+        <div class="right-container-divs" id="d1">
+            Hi. I'm Jeeban Jyoti Patra, a passionate B.Tech student currently pursuing my studies at IIT Bhubaneswar in Odisha. Welcome to my digital space, where I'm thrilled to share my journey, creations, and aspirations with you. <br><br>
+            Ever since I can remember, I've been captivated by the world of technology and innovation. This fascination has driven me to continuously explore and innovate within the realm of computer science and engineering. Through the years, I've had the privilege of delving into a variety of projects and experiences, each contributing to my growth as a tech enthusiast and aspiring engineer. <br><br>
+            My approach to problem-solving and coding is characterized by a deep curiosity and determination to create meaningful solutions. I firmly believe in the power of collaboration and continuous learning, which shines through in every coding challenge I tackle. Whether it's developing efficient algorithms or crafting intuitive user interfaces, I am committed to delivering excellence and exceeding expectations. <br><br>
+            These projects not only showcase my technical skills but also my enthusiasm for pushing the boundaries of what's possible in the tech world.
+        </div>
+        <div class="right-container-divs" id="d2" style="margin-top: 90px;">
+            <h4 class="mob-part-head" id="hd2" style="margin-top: 90px;">EXPERTISE</h4>
+            <div class="expertise-cards" id="exp_card_1" onmouseover="expertise_card_over1()" onmouseleave="expertise_card_leave1()">
+                <h4 class="expertise-card-title" id="exp_card_title_1">Web Development</h4>
+                <p class="expertise-card-description">Building and maintaining frontend and backend of websites and web-apps. 
+                                                        Technologies like <b style="color: rgb(228, 228, 228);">web sockets</b>, <b style="color: rgb(228, 228, 228);">database connection</b>, etc. are also included.</p>
+                <ul class="expertise-card-languages">
+                    <li class="lang">html</li>
+                    <li class="lang">css</li>
+                    <li class="lang" style="width: 84px;">javascript</li>
+                </ul>
+                <ul class="expertise-card-languages">
+                    <li class="lang">node.js</li>
+                    <li class="lang">jQuery</li>
+                </ul>
+            </div>
+            <div class="expertise-cards" id="exp_card_2" style="margin-top: 17px;" onmouseover="expertise_card_over2()" onmouseleave="expertise_card_leave2()">
+                <h4 class="expertise-card-title" id="exp_card_title_2">Android and IOS Development</h4>
+                <p class="expertise-card-description">Building Android applications with <b style="color: rgb(228, 228, 228);">android studio</b> and IOS applications with <b style="color: rgb(228, 228, 228);">XCode</b> using java and swift respectively as their main programming languages. 
+                                                        Using the Visual Studio for android development is also a great choice.</p>
+                <ul class="expertise-card-languages">
+                    <li class="lang">java</li>
+                    <li class="lang">swift</li>
+                    <li class="lang">C#</li>
+                </ul>
+            </div>
+            <div class="expertise-cards" id="exp_card_3" style="margin-top: 17px;" onmouseover="expertise_card_over3()" onmouseleave="expertise_card_leave3()">
+                <h4 class="expertise-card-title" id="exp_card_title_3">Database Management Systems</h4>
+                <p class="expertise-card-description">Database Management helps to keep our data organised and easily accesible. 
+                                                        I develop of such databases using technologies like <b style="color: rgb(228, 228, 228);">MySQL</b> and <b style="color: rgb(228, 228, 228);">MongoDB</b> and also connect them to the applications using languages like node.js and python.</p>
+                <ul class="expertise-card-languages">
+                    <li class="lang">MySQL</li>
+                    <li class="lang" style="width: 86px;">MongoDB</li>
+                </ul><br>
+            </div>
+            <div class="expertise-cards" id="exp_card_4" style="margin-top: 17px;" onmouseover="expertise_card_over4()" onmouseleave="expertise_card_leave4()">
+                <h4 class="expertise-card-title" id="exp_card_title_4">Multiple Programming Languages</h4>
+                <p class="expertise-card-description">With a knowledge of a variety of programming languages I can use all of their features. 
+                                                        This knowledge also helps in learning other languages faster.
+                                                        Some of them are listed below.</p>
+                <ul class="expertise-card-languages">
+                    <li class="lang">C++</li>
+                    <li class="lang">java</li>
+                    <li class="lang">C#</li>
+                </ul>
+                <ul class="expertise-card-languages">
+                    <li class="lang">C</li>
+                    <li class="lang">python</li>
+                    <li class="lang">swift</li>
+                </ul>
+                <ul class="expertise-card-languages">
+                    <li class="lang">node.js</li>
+                    <li class="lang" style="width: 84px;">javascript</li>
+                </ul>
+            </div>
+            <div class="expertise-cards" id="exp_card_5" onmouseover="expertise_card_over5()" onmouseleave="expertise_card_leave5()">
+                <h4 class="expertise-card-title" id="exp_card_title_5">Windows App Development</h4>
+                <p class="expertise-card-description">Developing windows application using the <b style="color: rgb(228, 228, 228);">.NET framework</b> and visual studio with C#.</p>
+                <ul class="expertise-card-languages">
+                    <li class="lang">C#</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-container-divs" id="d3" style="margin-top: 90px;">
+            <h4 class="mob-part-head" id="hd3">PROJECTS</h4>
+            <div class="project-cards" id="prj_card_1" onmouseover="project_card_over1()" onmouseleave="project_card_leave1()">
+                <img src="./images/Screenshot 2023-08-08 223024.png" height="40%" width="40%" class="prj-img">
+                <div class="prj-d">
+                    <a href="#" class="project-card-title" id="prj_card_title_1">Portfolio Website</a>
+                    <p class="project-card-description">Portfolio site made using html, css and javascript.
+                    </p>
+                    <ul class="expertise-card-languages">
+                        <li class="lang">html</li>
+                        <li class="lang">css</li>
+                        <li class="lang" style="width: 84px;">javascript</li>
+                    </ul>
+                    <ul class="expertise-card-languages">
+                        <li class="lang">jQuery</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-cards" id="prj_card_2" style="margin-top: 17px;" onmouseover="project_card_over2()" onmouseleave="project_card_leave2()">
+                <img src="./images/Screenshot 2023-08-08 200138.png" height="40%" width="40%" class="prj-img">
+                <div class="prj-d">
+                    <a href="#" class="project-card-title" id="prj_card_title_2">Instagram Login Page</a>
+                    <p class="project-card-description">A copy of the instagram login page that saves the login information on the server and redirect users to real instagram page.
+                                                        Built with node.js and using dynamic links with <b style="color: rgb(228, 228, 228);">ejs view engine</b> in node.js.
+                    </p>
+                    <ul class="expertise-card-languages">
+                        <li class="lang">node.js</li>
+                        <li class="lang">ejs</li>
+                        <li class="lang">css</li>
+                    </ul>
+                    <ul class="expertise-card-languages">                        
+                        <li class="lang" style="width: 84px;">javascript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-cards" id="prj_card_3" style="margin-top: 17px;" onmouseover="project_card_over3()" onmouseleave="project_card_leave3()">
+                <img src="./images/Annotation 2023-06-23 130323.png" height="40%" width="40%" class="prj-img">
+                <div class="prj-d">
+                    <a href="#" class="project-card-title" id="prj_card_title_3">Live Chat Web Application</a>
+                    <p class="project-card-description">Live chat <b style="color: rgb(228, 228, 228);">web app</b> where anyone can make custom rooms, join existing rooms or join some random public chat.
+                                                        User friendly and easy to use. Made with node.js and <b style="color: rgb(228, 228, 228);">ejs view engine</b>.
+                                                        It is also connected to a database to the server so your room will persist even if all the members log out of the room.
+                    </p>
+                    <ul class="expertise-card-languages">
+                        <li class="lang">node.js</li>
+                        <li class="lang">html</li>
+                        <li class="lang">css</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-cards" id="prj_card_4" style="margin-top: 17px;" onmouseover="project_card_over4()" onmouseleave="project_card_leave4()">
+                <img src="./images/Screenshot 2023-08-08 220100.png" height="40%" width="40%" class="prj-img">
+                <div class="prj-d">
+                    <a href="#" class="project-card-title" id="prj_card_title_4">Login/Signup Page</a>
+                    <p class="project-card-description">A very simple login page built with node.js with MongoDB database connection.</p>
+                    <ul class="expertise-card-languages">
+                        <li class="lang">node.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="end">
+            LET ME TAKE YOUR AMAZING IDEAS TO THE DIGITAL REALM.
+        </div>
+        <ul class="contact-s" id="contacts-small-screen">
+            <li><a href="https://github.com/jeeban-jyoti/" class="contact-links">Github</li></a>
+            <li><a href="https://www.instagram.com/_jeeban_jyoti_patra_/" class="contact-links">Instagram</li></a>
+            <li><a href="jeebanjyoti1016@gmail.com" class="contact-links">Mail</li></a>
+            <li><a href="#" class="contact-links">LinkedIn</li></a>
+        </ul>
+    </div>
+    
+    <script defer src="./test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

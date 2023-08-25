@@ -1,0 +1,257 @@
+@media not screen and (min-width:1020px) and (min-height:670px){ 
+  body{
+        background-color: rgb(17, 25, 46);
+        padding: 5%;
+        background-image: radial-gradient(circle farthest-side at var(--xs, 0px) var(--ys, 0px), rgb(22, 37, 71) 20px, rgb(17, 32, 70) 120px, rgb(21, 35, 68) 200px, rgb(17, 25, 48) 400px, transparent 50px);
+    }
+    
+    .head-text{
+        color: rgb(203, 205, 223);
+    }
+
+    h1{
+        padding-top: 50px;
+    }
+
+    #d1{
+        padding-left: 20px;
+        color: rgb(195, 195, 203);
+    }
+    
+    #contacts-big-screen{
+        display: none;
+    }
+    .sections{
+        display: none;
+    }
+
+    #short-description{
+        width: 80%;
+    }
+
+    .right-container{
+        margin-top: 50px;
+        width: 100%;
+        color:rgb(228, 228, 228);
+    }
+
+    .mob-part-head{
+        height: 40px;
+        width: 100%;
+        font: 20px bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .expertise-cards{
+        border: 1px transparent;
+        padding: 20px;
+        transition: 0.2s;
+    }
+    .expertis-card-title{
+        color: rgb(228, 228, 228);
+    }
+    .expertise-card-description{
+        color: rgb(169, 169, 201);
+    }
+    .expertise-card-languages{
+        color: rgb(174, 174, 233);
+        display: inline-flex;
+        list-style: none;
+    }
+    .lang{
+        font-size: 13px;
+        text-align: center;
+        width: 70px;
+        height: 25px;
+        color: aqua;
+        text-align: center;
+        border-radius: 30px;
+        margin-right: 10px;
+        background-color: #19354b;
+    }
+
+    .project-cards{
+        display: inline-flex;
+        padding: 20px;
+        transition: 0.2s;
+    }
+    .prj-img{
+        width: 40%;
+    }
+    .prj-d{
+        padding-left: 10px;
+        width: 100%;
+    }
+    .project-card-title{
+        text-decoration: none;
+        font-size: 24px;
+        color: rgb(228, 228, 228);
+    }
+    .project-card-description{
+        color: rgb(169, 169, 201);
+    }
+
+    .contact-s{
+        color: rgb(174, 174, 233);
+        margin: 40px;
+        list-style: none;
+    }
+    
+    li{
+        margin-top: 10px;
+        font: 18px bold;
+    }
+    
+    .contact-links{
+        text-decoration: none;
+        color: rgb(174, 174, 233);
+        transition: 0.14s;
+    }
+    .contact-links:hover{
+        color:rgb(228, 228, 228);
+    }
+
+    #end{
+        font: 20px bolder;
+    }
+}
+
+@media only screen and (min-width:1020px) and (min-height:670px){
+    body{
+        background-color: rgb(17, 25, 46);
+        background-image: radial-gradient(circle farthest-side at var(--x, 0px) var(--y, 0px), rgb(17, 30, 61) 20px, rgb(13, 26, 60) 120px, rgb(16, 28, 55) 200px, rgb(17, 25, 48) 400px, transparent 50px);
+    }
+
+    .mob-part-head{
+        display: none;
+    }
+    
+    .head-text{
+        color: rgb(228, 228, 228);
+    }
+    
+    .left-container{
+        position: fixed;
+        margin-left: 159px;
+        padding-top: 100px;
+        width: 40%;
+        height: 100%;
+    }
+    
+    .right-container{
+        padding-top: 100px;
+        width:35%;
+        color:rgb(228, 228, 228);
+        margin-left: 55%;
+    }
+    
+    .sections{
+        color:rgb(174, 174, 233);
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    
+    .line{
+        color:rgb(174, 174, 233);
+        width: 60px;
+        display: flex;
+        transition: 0.2s;
+    }
+    
+    .s-button{
+        border: none;
+        font-size: 15px;
+        color: rgb(174, 174, 233);
+        background: transparent;
+        transition: 0.14s;
+    }
+    
+    .contact{
+        color: rgb(174, 174, 233);
+        position: absolute;
+        margin-bottom: 20px;
+        display: inline-flex;
+        list-style: none;
+        bottom: 0;
+        padding-bottom: 30px;
+    }
+    
+    li{
+        margin-right: 30px;
+    }
+    
+    .contact-links{
+        text-decoration: none;
+        color: rgb(174, 174, 233);
+        transition: 0.14s;
+    }
+    .contact-links:hover{
+        color:rgb(228, 228, 228);
+    }
+
+    .expertise-cards{
+        border: 1px transparent;
+        padding: 20px;
+        transition: 0.2s;
+    }
+    .expertis-card-title{
+        color: rgb(228, 228, 228);
+    }
+    .expertise-card-description{
+        color: rgb(169, 169, 201);
+    }
+    .expertise-card-languages{
+        color: rgb(174, 174, 233);
+        display: inline-flex;
+        list-style: none;
+    }
+    .lang{
+        font-size: 14px;
+        width: 70px;
+        height: 25px;
+        color: aqua;
+        text-align: center;
+        border-radius: 30px;
+        background-color: #19354b;
+    }
+
+    .project-cards{
+        display: inline-flex;
+        padding: 20px;
+        transition: 0.2s;
+    }
+    .prj-img{
+        width: 40%;
+    }
+    .prj-d{
+        padding-left: 10px;
+        width: 100%;
+    }
+    .project-card-title{
+        text-decoration: none;
+        font-size: 24px;
+        color: rgb(228, 228, 228);
+    }
+    .project-card-description{
+        color: rgb(169, 169, 201);
+    }
+
+    #end{
+        height: 50px;
+        width: 100%;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    #contacts-small-screen{
+        visibility: hidden;
+    }
+
+    #d1{
+        padding-left: 20px;
+    }
+}
